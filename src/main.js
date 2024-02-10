@@ -45,7 +45,6 @@ async function searchImages(e) {
       });
     }
   } else {
-    console.log('query bad');
     iziToast.error({
       message: 'Search attribute is not valid',
       progressBar: false,
