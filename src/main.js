@@ -64,6 +64,11 @@ async function loadMoreImages(e) {
   const htmlImageList = getHtmlImageList(imageList);
   renderGallery(htmlImageList, galleryList);
   gallery.refresh();
+  const listItemHeight = document.querySelector('.gallery-item');
+  window.scrollBy({
+    top: listItemHeight.getBoundingClientRect().height * 2,
+    behavior: 'smooth',
+  });
   if (pixabay.totalPages === pixabay.currentPage) {
     htmlElementVisible(loadMoreButton, false);
     iziToast.info({
