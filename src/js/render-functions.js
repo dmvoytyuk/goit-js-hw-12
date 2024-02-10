@@ -32,5 +32,5 @@ export function getHtmlImageList(iamgesList) {
   }
 }
 export function renderGallery(htmlImageList, galleryList) {
-  galleryList.innerHTML = `${htmlImageList}`;
+  galleryList.insertAdjacentHTML('beforeend', htmlImageList);
 }
